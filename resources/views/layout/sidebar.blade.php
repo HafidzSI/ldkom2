@@ -8,9 +8,12 @@
                     <div id="subPages" class="collapse ">
                         <ul class="nav">
                             <li><a href="{{ route('print.index') }}" class="">Print</a></li>
+                            <li><a href="{{ route('print.rekap') }}" class="">Rekap transaksi</a></li>
                         </ul>
                     </div>
                 </li>
+                <li><a href="{{ route('user.index') }}" class=""><i class="lnr lnr-user"></i> <span>User
+                </span></a></li>
             </ul>
         </nav>
     </div>

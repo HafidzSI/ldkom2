@@ -49,4 +49,18 @@ class PrintController extends Controller
         $detail_trans = Transaksi::find($id);
         return view('print.detail',compact('detail_trans'));
     }
+
+    public function rekap()
+    {
+        return view('print.rekap');
+    }
+
+    public function cetakRekap(Request $request)
+    {
+        $data = Transaksi::whereMonth('updated_at', '=', '11')
+                            ->whereYear('updated_at','=','2019')
+                            ->get();
+        return view('print.rekap',compact('data'))->with('success','Berhasil');
+
+    }
 }
